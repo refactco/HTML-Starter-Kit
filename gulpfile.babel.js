@@ -17,6 +17,9 @@ const $ = require('gulp-load-plugins')();
 const reload = browserSync.reload;
 const isDemo = argv.build === 'demo';
 const terser = require('gulp-terser');
+const sass = require('gulp-sass')(require('sass'));
+
+sass.compiler = require('sass')
 const zipFileName = `markitasdone.com__${pkg.name}__v${pkg.version}`;
 
 // Lint JavaScript
@@ -98,13 +101,8 @@ function styles() {
   // For best performance, don't add Sass partials to `gulp.src`
   return src(['src/styles/**/*.scss', 'src/styles/**/*.css'])
     .pipe($.newer('.tmp/styles'))
-    .pipe(
-      $.sass({
-        outputStyle: 'expanded',
-        precision: 10,
-        includePaths: ['.']
-      }).on('error', $.sass.logError)
-    )
+    .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
+    // .pipe(sass().on('error', sass.logError))
     .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
     .pipe($.size({ title: 'styles' }))
     .pipe(dest('.tmp/styles'));

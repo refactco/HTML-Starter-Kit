@@ -1,10 +1,10 @@
 {
   "name": "html-starter-kit",
-  "version": "1.0.1",
-  "homepage": "https://markitasdone.com/",
+  "version": "2.0.0",
+  "homepage": "https://markitdone.com/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MarkItAsDone/HTML-Starter-Kit.git"
+    "url": "https://github.com/MarkItDone/HTML-Starter-Kit.git"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -27,7 +27,8 @@
     "gulp-match": "^1.1.0",
     "gulp-newer": "^1.4.0",
     "gulp-run-command": "^0.0.9",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.52.1",
     "gulp-size": "^3.0.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-terser": "^1.2.0",
@@ -56,10 +57,6 @@
     "extends": "google"
   },
   "dependencies": {
-    "a11y-dialog": "^5.2.0",
-    "flickity": "^2.1.2",
-    "formdata-polyfill": "^3.0.13",
-    "inuitcss": "^6.0.0",
-    "smooth-scroll": "^15.0.0"
+    "normalize.css": "^8.0.1"
   }
 }
