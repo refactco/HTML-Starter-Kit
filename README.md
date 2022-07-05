@@ -18,7 +18,7 @@ You may need to install a few assets before you can get started, such as Node.
 ### [Node.js](https://nodejs.org)
 
 Bring up a terminal and type `node --version`.
-Node should respond with a version at or above 0.10.x.
+Node should respond with a version at or above 16.x.x.
 
 ## **Install**
 
